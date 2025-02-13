@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { CalendarDays } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { sendEmail } from '@/app/actions';
+import { BuildProcess } from '@/components/build-process';
 
 export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -46,7 +47,9 @@ export default function Home() {
           </Link>
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
-            href="#schedule"
+            href="https://calendly.com/lukemoderwell/sauna-consult"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Schedule
           </Link>
@@ -70,7 +73,13 @@ export default function Home() {
                   <Link href="#sauna-guide">Free Sauna Planning Guide</Link>
                 </Button>
                 <Button variant="outline" asChild>
-                  <Link href="#schedule">Schedule a Design Consultation</Link>
+                  <Link
+                    href="https://calendly.com/lukemoderwell/sauna-consult"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Schedule a Design Consultation
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -82,33 +91,51 @@ export default function Home() {
         >
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8 text-center">
-              Analog: A cure for the digital life
+              A cure for the digital life
             </h2>
             <div className="typewriter-text max-w-[800px] mx-auto p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
               <p className="font-mono text-lg leading-relaxed space-y-4">
-                I believe life is out of balance.
+                It feels like modern life is out of balance.
                 <br />
                 <br />
-                Our existance has become digital. The Almighty Screen demands
-                more and more our time to be sacrificed at it's alter.
+                Our existance has become mostly digital. The Almighty Screen
+                demands more and more our time. There are endless feeds to
+                scroll, unreads to respond to, and a never ending stream of
+                short form entertainment in our pockets. Our attention span is
+                an endangered species.
                 <br />
                 <br />
-                Over the last decade, I've spent most of my waking hours
-                building software for a living.
+                <strong>
+                  The traditional sauna symbolizes an antidote to this
+                  unbalanced life.
+                </strong>
+                &nbsp;It is a sacred space; unhurried and unaware of the busy
+                demands of modernity. No feeds. No unread messages. No
+                distractions. Just air, heat and people you enjoy.
                 <br />
                 <br />
-                Finnish families have known for thousands of years that sauna is
-                a way of life. A way of connecting with people and nature in a
-                primal way: heat in a wooden box up to extremely high
-                temperatures and bask in the warmth.
+                Scandanivian families have long known the secret value of sauna:
+                connection with people and nature along with plenty of health
+                benefits. The rest of the world is just starting to take notice.
+                If you are interested in experiencing the benefits of a home
+                sauna, I'd love to help you on your journey.
                 <br />
                 <br />
-                The sauna is a special space; unhurried and unaware of the
-                demands busy demands of modern life. No distractions, No fancy
-                tech. Just air, heat and people you enjoy.
+                Cheers,
                 <br />
+                <br />
+                Luke Moderwell
+                <br />
+                Analog Custom Sauna
               </p>
-              <div className="mt-8">
+              {/* <div className="mt-8">
+                <img
+                  src="/signature.svg"
+                  alt="Signature"
+                  className="w-48 h-auto"
+                />
+              </div> */}
+              {/* <div className="mt-8">
                 <svg
                   className="signature"
                   width="200"
@@ -141,11 +168,11 @@ export default function Home() {
                     strokeWidth="2"
                   />
                 </svg>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        {/* <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
               Case Study: Newport KY
@@ -208,9 +235,22 @@ export default function Home() {
             </div>
             <div className="mt-8 text-center">
               <Button asChild>
-                <Link href="#schedule">Schedule a Consultation</Link>
+                <Link
+                  href="https://calendly.com/lukemoderwell/sauna-consult"
+                  target="_blank"
+                >
+                  Schedule a Consultation
+                </Link>
               </Button>
             </div>
+          </div>
+        </section> */}
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6 mx-auto">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
+              Our Build Process
+            </h2>
+            <BuildProcess />
           </div>
         </section>
         <section id="sauna-guide" className="w-full py-12 md:py-24 lg:py-32">
@@ -286,28 +326,31 @@ export default function Home() {
             </p>
             <Button className="mt-8" asChild>
               <Link
-                href="https://calendly.com/your-calendly-link"
+                href="https://calendly.com/lukemoderwell/sauna-consult"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <CalendarDays className="mr-2 h-4 w-4" /> Schedule on Calendly
+                <CalendarDays className="mr-2 h-4 w-4" /> Schedule a Design
+                Consultation
               </Link>
             </Button>
           </div>
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">
-          © 2025 Analog Custom Saunas. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+        <div className="container px-4 md:px-6 mx-auto">
+          <p className="text-xs text-gray-500 dark:text-gray-400">
+            © 2025 Analog Custom Sauna. All rights reserved.
+          </p>
+        </div>
+        {/* <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">
             Terms of Service
           </Link>
           <Link className="text-xs hover:underline underline-offset-4" href="#">
             Privacy
           </Link>
-        </nav>
+        </nav> */}
       </footer>
     </div>
   );
