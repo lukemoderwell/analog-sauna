@@ -98,15 +98,15 @@ export default function Home() {
                 It feels like modern life is out of balance.
                 <br />
                 <br />
-                Our existance has become mostly digital. The Almighty Screen
-                demands more and more our time. There are endless feeds to
-                scroll, unreads to respond to, and a never ending stream of
-                short form entertainment in our pockets. Our attention span is
-                an endangered species.
+                Our existance has become digital. The Almighty Screen demands
+                more and more our time. There are endless feeds to scroll,
+                unreads to respond to, and a never ending stream of short form
+                entertainment in our pockets. Our attention span is an
+                endangered species.
                 <br />
                 <br />
                 <strong>
-                  The traditional sauna symbolizes an antidote to this
+                  I believe the traditional sauna represents a cure for this
                   unbalanced life.
                 </strong>
                 &nbsp;It is a sacred space; unhurried and unaware of the busy
@@ -118,7 +118,7 @@ export default function Home() {
                 connection with people and nature along with plenty of health
                 benefits. The rest of the world is just starting to take notice.
                 If you are interested in experiencing the benefits of a home
-                sauna, I'd love to help you on your journey.
+                sauna, I'd love to help you and your family on this journey.
                 <br />
                 <br />
                 Cheers,
@@ -126,7 +126,7 @@ export default function Home() {
                 <br />
                 Luke Moderwell
                 <br />
-                Analog Custom Sauna
+                Analog Custom Sauna, January 2025
               </p>
               {/* <div className="mt-8">
                 <img
@@ -256,14 +256,14 @@ export default function Home() {
         <section id="sauna-guide" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Plan Your Family Sauna
+              Plan Your Custom Sauna
             </h2>
             {!formSubmitted ? (
               <>
                 <p className="mt-4 max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                   Thinking about adding a sauna to your home? Get our free
                   1-pager with essential questions to consider when planning
-                  your family sauna.
+                  your custom family sauna.
                 </p>
                 <form
                   className="mt-8 max-w-sm space-y-4"
