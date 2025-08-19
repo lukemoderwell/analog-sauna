@@ -4,13 +4,20 @@ export default function CTA() {
       <div className="container text-center">
         <h2 className="h2 mb-4">Ready to elevate your property?</h2>
         <p className="lead mb-6">Book a quick intro call. We'll discuss goals, budget, and timeline.</p>
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
           <a href="https://calendly.com/" target="_blank" rel="noreferrer noopener" className="btn btn-primary">
             Book on Calendly
           </a>
-          <a href="mailto:hello@analogsauna.com" className="btn">
-            Email Us
+          <a href="tel:+15132820225" className="btn">
+            Call (513) 282-0225
           </a>
+          <a href="mailto:luke@analogsauna.com" className="btn">
+            Email Luke
+          </a>
+        </div>
+        <div className="text-sm text-neutral-600 mb-8">
+          <p>Or reach out directly:</p>
+          <p className="font-medium">luke@analogsauna.com • (513) 282-0225</p>
         </div>
         {/* Inline embed alternative (swap Calendly URL): */}
         <div className="max-w-3xl mx-auto mt-10 card p-2">
