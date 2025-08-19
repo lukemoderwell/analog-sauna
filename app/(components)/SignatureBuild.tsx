@@ -1,3 +1,7 @@
+"use client"
+
+import { useState } from "react"
+
 export default function SignatureBuild() {
   const photos = [
     "/photos/sauna-exterior-1.jpg",
@@ -5,6 +9,19 @@ export default function SignatureBuild() {
     "/photos/sauna-interior.jpg",
     "/photos/sauna-door-detail.jpg",
   ]
+
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [currentImage, setCurrentImage] = useState("")
+
+  const openLightbox = (src: string) => {
+    setCurrentImage(src)
+    setLightboxOpen(true)
+  }
+
+  const closeLightbox = () => {
+    setLightboxOpen(false)
+    setCurrentImage("")
+  }
 
   return (
     <section id="portfolio" className="section">
@@ -23,9 +40,10 @@ export default function SignatureBuild() {
           {photos.map((src, i) => (
             <div
               key={src}
-              className={`overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-all duration-300 ${
+              className={`overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer ${
                 i === 0 ? "sm:col-span-2 lg:col-span-1" : ""
               }`}
+              onClick={() => openLightbox(src)}
             >
               <img
                 src={src || "/placeholder.svg"}
@@ -42,6 +60,28 @@ export default function SignatureBuild() {
           <p className="text-neutral-500 text-sm md:text-base">More builds coming soon.</p>
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <div className="relative max-w-7xl max-h-full">
+            <img
+              src={currentImage || "/placeholder.svg"}
+              alt="Sauna project detail"
+              className="max-w-full max-h-full object-contain rounded-lg"
+            />
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 text-white text-4xl hover:text-neutral-300 transition-colors"
+              aria-label="Close lightbox"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
