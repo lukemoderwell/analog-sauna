@@ -11,8 +11,22 @@ export const metadata: Metadata = {
     description: "Boost occupancy & nightly rates with a signature sauna experience.",
     type: "website",
     url: "https://analogsauna.com",
+    images: [
+      {
+        url: "/photos/sauna-exterior-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Modern custom sauna with dark blue siding and natural wood door",
+      },
+    ],
   },
-    generator: 'v0.app'
+  twitter: {
+    card: "summary_large_image",
+    title: "Analog Sauna — Custom sauna design & build",
+    description: "Boost occupancy & nightly rates with a signature sauna experience.",
+    images: ["/photos/sauna-exterior-1.jpg"],
+  },
+  generator: "v0.app",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
