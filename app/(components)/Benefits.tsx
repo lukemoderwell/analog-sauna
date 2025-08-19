@@ -1,16 +1,19 @@
 export default function Benefits() {
   const items = [
     {
-      title: "Increase nightly rates",
-      body: "A sauna differentiates your listing and commands a premium.",
+      title: "Increase Nightly Rates",
+      body: "Listings with a sauna often command 10–30% higher nightly rates compared to similar properties without wellness amenities.",
+      source: "ChillFire Saunas",
     },
     {
-      title: "Stand out in competitive markets",
-      body: "Create a signature wellness experience that photographs beautifully.",
+      title: "Stand Out in Competitive Markets",
+      body: "Saunas are key differentiators that significantly elevate your property's allure and create a signature wellness experience that photographs beautifully.",
+      source: "Backcountry Recreation",
     },
     {
-      title: "Built to last",
-      body: "Durable materials and craft focused on decades of use.",
+      title: "Built to Last & High ROI",
+      body: "Durable materials and craft focused on decades of use. Return Timeline: 12–24 months is a common payback period for rental properties.",
+      source: "ChillFire Saunas",
     },
   ]
 
@@ -21,13 +24,22 @@ export default function Benefits() {
           <h2 className="h2">A sauna is more than a luxury—it's an investment</h2>
           <p className="lead">Perfect for rental owners and property managers.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
           {items.map((it) => (
             <div key={it.title} className="card p-6">
-              <h3 className="text-lg font-semibold mb-2">{it.title}</h3>
-              <p className="text-neutral-600">{it.body}</p>
+              <h3 className="text-lg font-semibold mb-3">{it.title}</h3>
+              <p className="text-neutral-600 mb-3">{it.body}</p>
+              <p className="text-sm text-neutral-500 italic">— {it.source}</p>
             </div>
           ))}
+        </div>
+
+        <div className="bg-sand p-8 rounded-lg max-w-2xl mx-auto text-center">
+          <h3 className="text-xl font-semibold mb-4">Guest Reactions</h3>
+          <blockquote className="text-lg text-neutral-700 mb-4">
+            "The sauna was amazing! Well worth the drive."
+          </blockquote>
+          <p className="text-sm text-neutral-500 italic">— Guest review from Backyard Lodge blog</p>
         </div>
       </div>
     </section>
