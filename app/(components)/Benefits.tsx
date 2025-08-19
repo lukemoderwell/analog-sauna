@@ -2,17 +2,48 @@ export default function Benefits() {
   const items = [
     {
       title: "Increase Nightly Rates",
-      body: "Listings with a sauna often command 10–30% higher nightly rates compared to similar properties without wellness amenities.",
+      body: (
+        <>
+          Listings with a sauna often command{" "}
+          <a
+            href="https://www.chillfiresaunas.com/blog/sauna-roi-in-short-term-rentals"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-ink hover:underline"
+          >
+            10–30% higher nightly rates
+          </a>{" "}
+          compared to similar properties without wellness amenities.
+        </>
+      ),
       source: "ChillFire Saunas",
     },
     {
       title: "Stand Out in Competitive Markets",
-      body: "Saunas are key differentiators that significantly elevate your property's allure and create a signature wellness experience that photographs beautifully.",
+      body: (
+        <>
+          <strong>Saunas are key differentiators</strong> that significantly elevate your property's allure and create a
+          signature wellness experience that photographs beautifully.
+        </>
+      ),
       source: "Backcountry Recreation",
     },
     {
       title: "Built to Last & High ROI",
-      body: "Durable materials and craft focused on decades of use. Return Timeline: 12–24 months is a common payback period for rental properties.",
+      body: (
+        <>
+          Durable materials and craft focused on decades of use.{" "}
+          <a
+            href="https://www.chillfiresaunas.com/blog/sauna-roi-in-short-term-rentals"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-ink hover:underline"
+          >
+            12–24 months is a common payback period
+          </a>{" "}
+          for rental properties.
+        </>
+      ),
       source: "ChillFire Saunas",
     },
   ]
@@ -28,7 +59,7 @@ export default function Benefits() {
           {items.map((it) => (
             <div key={it.title} className="card p-6">
               <h3 className="text-lg font-semibold mb-3">{it.title}</h3>
-              <p className="text-neutral-600 mb-3">{it.body}</p>
+              <div className="text-neutral-600 mb-3">{it.body}</div>
               <p className="text-sm text-neutral-500 italic">— {it.source}</p>
             </div>
           ))}
