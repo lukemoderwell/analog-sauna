@@ -12,9 +12,6 @@ export default function Navbar() {
           <a href="#owners" className="btn btn-ghost max-lg:hidden">
             For Property Owners
           </a>
-          <a href="#portfolio" className="btn btn-ghost max-lg:hidden">
-            Signature Build
-          </a>
           <a href="#book" className="btn btn-primary">
             Book a Call
           </a>
