@@ -9,10 +9,10 @@ export default function Navbar() {
           Analog Sauna
         </Link>
         <nav className="flex items-center gap-2">
-          <a href="#owners" className="btn btn-ghost hidden lg:inline-flex">
+          <a href="#owners" className="btn btn-ghost max-lg:hidden">
             For Property Owners
           </a>
-          <a href="#portfolio" className="btn btn-ghost hidden lg:inline-flex">
+          <a href="#portfolio" className="btn btn-ghost max-lg:hidden">
             Signature Build
           </a>
           <a href="#book" className="btn btn-primary">
