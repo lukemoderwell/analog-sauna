@@ -1,3 +1,5 @@
+"use client"
+
 export default function CTA() {
   return (
     <section id="book" className="section">
@@ -13,11 +15,15 @@ export default function CTA() {
           >
             Book on Calendly
           </a>
-          <a href="tel:+15132820225" className="btn">
-            Call (513) 282-0225
+          <a href="tel:+15132820225" className="btn btn-contact" onClick={() => console.log("[v0] Phone link clicked")}>
+            📞 Call (513) 282-0225
           </a>
-          <a href="mailto:luke@analogsauna.com" className="btn">
-            Email Luke
+          <a
+            href="mailto:luke@analogsauna.com"
+            className="btn btn-contact"
+            onClick={() => console.log("[v0] Email link clicked")}
+          >
+            ✉️ Email Luke
           </a>
         </div>
         <div className="text-sm text-neutral-600 mb-8">

@@ -145,12 +145,18 @@ body {
 }
 .btn {
   @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-base font-medium shadow-sm border border-neutral-200 hover:shadow-md transition;
+  /* Adding cursor pointer and better hover states for contact links */
+  cursor: pointer;
 }
 .btn-primary {
   @apply bg-ink text-white hover:opacity-90;
 }
 .btn-ghost {
   @apply bg-white text-ink;
+}
+/* Adding specific styling for contact buttons */
+.btn-contact {
+  @apply bg-sand text-ink border-smoke hover:bg-smoke hover:shadow-lg;
 }
 .card {
   @apply rounded-2xl border border-neutral-200 bg-white shadow-sm;
