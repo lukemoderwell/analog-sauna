@@ -14,7 +14,7 @@ export default function Hero() {
             <a href="#book" className="btn btn-primary text-center py-4 px-6 text-lg font-semibold">
               Book a Call
             </a>
-            <a href="#portfolio" className="btn text-center py-4 px-6 text-lg">
+            <a href="#portfolio" className="btn text-center py-4 px-6 text-lg hidden sm:inline-flex">
               See our Signature Build
             </a>
           </div>
