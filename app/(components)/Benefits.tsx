@@ -1,6 +1,7 @@
 export default function Benefits() {
   const items = [
     {
+      number: "01",
       title: "Increase Nightly Rates",
       body: (
         <>
@@ -19,6 +20,7 @@ export default function Benefits() {
       source: "ChillFire Saunas",
     },
     {
+      number: "02",
       title: "Stand Out in Competitive Markets",
       body: (
         <>
@@ -29,6 +31,7 @@ export default function Benefits() {
       source: "Backcountry Recreation",
     },
     {
+      number: "03",
       title: "Built to Last & High ROI",
       body: (
         <>
@@ -49,27 +52,33 @@ export default function Benefits() {
   ]
 
   return (
-    <section id="owners" className="section bg-white border-y border-smoke">
+    <section id="owners" className="section bg-gradient-to-b from-white to-sand/30 border-y border-smoke">
       <div className="container">
-        <div className="max-w-2xl mb-10">
-          <h2 className="h2">A sauna is more than a luxury—it's an investment</h2>
-          <p className="lead">Perfect for rental owners and property managers.</p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {items.map((it) => (
-            <div key={it.title} className="card p-6">
-              <h3 className="text-lg font-semibold mb-3">{it.title}</h3>
-              <div className="text-neutral-600 mb-3">{it.body}</div>
-            </div>
-          ))}
+        <div className="max-w-3xl mb-16 text-center">
+          <h2 className="h2 mb-4">A sauna is more than a luxury—it's an investment</h2>
+          <p className="lead text-xl">Perfect for rental owners and property managers looking to maximize returns.</p>
         </div>
 
-        <div className="bg-sand p-8 rounded-lg max-w-2xl mx-auto text-center">
-          <h3 className="text-xl font-semibold mb-4">Guest Reactions</h3>
-          <blockquote className="text-lg text-neutral-700 mb-4">
-            "The sauna was amazing! Well worth the drive."
-          </blockquote>
-          <p className="text-sm text-neutral-500 italic">— Guest review from Backyard Lodge blog</p>
+        <div className="grid md:grid-cols-3 gap-8">
+          {items.map((item, index) => (
+            <div
+              key={item.title}
+              className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-smoke/50 hover:border-smoke"
+            >
+              <div className="absolute -top-4 left-8">
+                <div className="bg-ink text-white text-sm font-bold px-3 py-1 rounded-full">{item.number}</div>
+              </div>
+
+              <div className="pt-4">
+                <h3 className="text-xl font-bold mb-4 text-ink group-hover:text-ink/80 transition-colors">
+                  {item.title}
+                </h3>
+                <div className="text-neutral-700 leading-relaxed">{item.body}</div>
+              </div>
+
+              <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-smoke to-transparent"></div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
