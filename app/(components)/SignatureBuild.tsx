@@ -4,9 +4,6 @@ export default function SignatureBuild() {
     "/photos/sauna-exterior-2.jpg",
     "/photos/sauna-interior.jpg",
     "/photos/sauna-door-detail.jpg",
-    "/sauna-construction.png",
-    "/sauna-heating-system.png",
-    "/sauna-relaxation-area.png",
   ]
 
   return (
