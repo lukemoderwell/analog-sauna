@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import Script from "next/script"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -32,6 +33,29 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Analog Sauna",
+              logo: "https://analogsauna.com/placeholder-logo.svg",
+              telephone: "+1-513-282-0225",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "123 Sauna Street",
+                addressLocality: "Cincinnati",
+                addressRegion: "OH",
+                postalCode: "45202",
+                addressCountry: "US",
+              },
+              url: "https://analogsauna.com",
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-sand text-ink antialiased">{children}</body>
     </html>
   )
