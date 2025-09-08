@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /owners
+Allow: /book
+Allow: /portfolio
+Allow: /photos
+
+Sitemap: https://analogsauna.com/sitemap.xml
