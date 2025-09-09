@@ -1,6 +1,14 @@
 "use client"
 
+import { useState } from "react"
+import dynamic from "next/dynamic"
+
+const CalendlyEmbed = dynamic(() => import("./CalendlyEmbed"), {
+  ssr: false,
+})
+
 export default function CTA() {
+  const [showScheduler, setShowScheduler] = useState(false)
   return (
     <section id="book" className="section">
       <div className="container text-center px-4">
@@ -20,6 +28,14 @@ export default function CTA() {
           >
             Book on Calendly
           </a>
+          {!showScheduler && (
+            <button
+              onClick={() => setShowScheduler(true)}
+              className="btn btn-primary w-full py-4 px-6 text-lg font-semibold"
+            >
+              Load inline scheduler
+            </button>
+          )}
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="tel:+15132820225"
@@ -43,17 +59,7 @@ export default function CTA() {
           <p className="font-medium">luke@analogsauna.com • (513) 282-0225</p>
         </div>
 
-        <div className="max-w-4xl mx-auto mt-8 md:mt-10">
-          <div className="bg-white rounded-2xl p-2 md:p-4 shadow-sm border border-neutral-200">
-            <div className="aspect-[4/3] md:aspect-[16/9] w-full">
-              <iframe
-                src="https://calendly.com/analog-sauna/30min"
-                className="w-full h-full rounded-xl"
-                title="Book a call"
-              />
-            </div>
-          </div>
-        </div>
+        {showScheduler && <CalendlyEmbed />}
       </div>
     </section>
   )
