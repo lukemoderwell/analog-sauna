@@ -8,7 +8,7 @@ const faqs = [
   },
   {
     question: "How long does installation take?",
-    answer: "Installation timelines vary, but most projects are completed within a few weeks after design approval.",
+    answer: "Installation timelines vary, but most projects can be completed within 3-4 weeks after design approval and site prep.",
   },
 ]
 
