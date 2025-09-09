@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function Hero() {
   return (
     <section className="section pt-8 md:pt-16">
@@ -20,9 +22,12 @@ export default function Hero() {
           </div>
         </div>
         <div className="rounded-2xl overflow-hidden shadow-sm border border-neutral-200 mt-6 md:mt-0">
-          <img
+          <Image
             src="/minimalist-sauna.png"
-            alt="Analog Sauna build"
+            alt="Minimalist custom sauna interior built by Analog Sauna"
+            width={1024}
+            height={679}
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="w-full h-[280px] sm:h-[320px] md:h-[360px] object-cover"
           />
         </div>
