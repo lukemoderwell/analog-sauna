@@ -1,4 +1,8 @@
-"use client"
+import dynamic from 'next/dynamic'
+
+const FooterAnalytics = dynamic(() => import('./FooterAnalytics'), {
+  ssr: false,
+})
 
 export default function Footer() {
   return (
@@ -7,22 +11,23 @@ export default function Footer() {
         <div className="mb-4">
           <a
             href="mailto:luke@analogsauna.com"
+            id="footer-email"
             className="hover:text-ink transition-colors underline"
-            onClick={() => console.log("[v0] Footer email link clicked")}
           >
             luke@analogsauna.com
           </a>
           {" • "}
           <a
             href="tel:+15132820225"
+            id="footer-phone"
             className="hover:text-ink transition-colors underline"
-            onClick={() => console.log("[v0] Footer phone link clicked")}
           >
             (513) 282-0225
           </a>
         </div>
         <div>© {new Date().getFullYear()} Analog Sauna. All rights reserved.</div>
       </div>
+      <FooterAnalytics />
     </footer>
   )
 }
