@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 export default function SignatureBuild() {
   const photos = [
@@ -8,6 +9,13 @@ export default function SignatureBuild() {
     "/photos/sauna-exterior-2.jpg",
     "/photos/sauna-interior.jpg",
     "/photos/sauna-door-detail.jpg",
+  ]
+
+  const photoAlts = [
+    "Modern outdoor sauna surrounded by greenery",
+    "Side view of minimalist black sauna exterior",
+    "Cedar wood interior of a custom sauna",
+    "Detail of glass door and wood craftsmanship",
   ]
 
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -45,9 +53,12 @@ export default function SignatureBuild() {
               }`}
               onClick={() => openLightbox(src)}
             >
-              <img
+              <Image
                 src={src || "/placeholder.svg"}
-                alt={`Sauna photo ${i + 1}`}
+                alt={photoAlts[i]}
+                width={4032}
+                height={3024}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className={`w-full object-cover hover:scale-[1.02] transition-transform duration-300 ${
                   i === 0 ? "h-64 sm:h-80 lg:h-64" : "h-64 sm:h-56 lg:h-64"
                 }`}
@@ -67,9 +78,12 @@ export default function SignatureBuild() {
           onClick={closeLightbox}
         >
           <div className="relative max-w-7xl max-h-full">
-            <img
+            <Image
               src={currentImage || "/placeholder.svg"}
-              alt="Sauna project detail"
+              alt="Enlarged view of the Analog Sauna signature build"
+              width={4032}
+              height={3024}
+              sizes="100vw"
               className="max-w-full max-h-full object-contain rounded-lg"
             />
             <button
