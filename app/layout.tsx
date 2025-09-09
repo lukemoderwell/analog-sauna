@@ -45,10 +45,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               telephone: "+1-513-282-0225",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "123 Sauna Street",
-                addressLocality: "Cincinnati",
+                streetAddress: "2771 Shawhan Rd",
+                addressLocality: "Morrow",
                 addressRegion: "OH",
-                postalCode: "45202",
+                postalCode: "45152",
                 addressCountry: "US",
               },
               url: "https://analogsauna.com",
