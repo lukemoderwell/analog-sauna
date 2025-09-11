@@ -1,11 +1,11 @@
-import Navbar from "./(components)/Navbar"
+import Navbar from "../(components)/Navbar"
 import Hero from "./(components)/Hero"
 import Benefits from "./(components)/Benefits"
-import SignatureBuild from "./(components)/SignatureBuild"
-import Process from "./(components)/Process"
-import FAQ from "./(components)/FAQ"
+import Portfolio from "./(components)/Portfolio"
+import Customization from "./(components)/Customization"
+import CaseStudy from "./(components)/CaseStudy"
 import CTA from "./(components)/CTA"
-import Footer from "./(components)/Footer"
+import Footer from "../(components)/Footer"
 
 export default function Page() {
   return (
@@ -14,9 +14,9 @@ export default function Page() {
       <main className="ml-4 sm:ml-6">
         <Hero />
         <Benefits />
-        <SignatureBuild />
-        <Process />
-        <FAQ />
+        <Portfolio />
+        <Customization />
+        <CaseStudy />
         <CTA />
       </main>
       <Footer />
