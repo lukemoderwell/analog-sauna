@@ -2,34 +2,30 @@ import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="section pt-8 md:pt-16">
-      <div className="container grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-        <div className="space-y-6 md:space-y-6">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-ink">
-            Beautiful custom saunas for modern properties
+    <section className="relative h-[70vh] md:h-screen">
+      <Image
+        src="/modern-sauna-installation.png"
+        alt="Luxurious custom sauna in a modern home"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="relative z-10 flex h-full items-center justify-center text-center px-4">
+        <div className="max-w-2xl space-y-6">
+          <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white font-medium leading-tight">
+            Bring the Healing Power of Sauna Into Your Home
           </h1>
-          <p className="text-lg md:text-xl leading-relaxed text-neutral-600">
-            We design and build saunas that boost rental value and guest experience. Minimal, durable, and built to
-            last.
+          <p className="font-sans text-lg md:text-xl text-white/90">
+            Custom-built saunas designed to match your home’s aesthetic while delivering unmatched wellness benefits.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-3">
-            <a href="#book" className="btn btn-primary text-center py-4 px-6 text-lg font-semibold">
-              Book a Call
-            </a>
-            <a href="#portfolio" className="btn text-center py-4 px-6 text-lg hidden sm:inline-flex">
-              See our Signature Build
-            </a>
-          </div>
-        </div>
-        <div className="rounded-2xl overflow-hidden shadow-sm border border-neutral-200 mt-6 md:mt-0">
-          <Image
-            src="/minimalist-sauna.png"
-            alt="Minimalist custom sauna interior built by Analog Sauna"
-            width={1024}
-            height={679}
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="w-full h-[280px] sm:h-[320px] md:h-[360px] object-cover"
-          />
+          <a
+            href="#quote"
+            className="btn btn-primary py-4 px-6 text-lg font-semibold"
+          >
+            Book a Free Design Consultation
+          </a>
         </div>
       </div>
     </section>
